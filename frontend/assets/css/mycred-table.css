@@ -1,0 +1,156 @@
+.bnp-payment-table-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 1080px;
+    overflow-x: auto;
+    font-size: 16px;
+    min-height: 700px;
+}
+
+.bnp-payment-table {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+}
+
+.bnp-payment-table th,
+.bnp-payment-table td {
+    height: 50px;
+    text-align: left;
+    line-height: 50px;
+    white-space: nowrap;
+    border-bottom: 1px solid #eee;
+}
+
+/* 分页按钮样式 */
+.bnp-pagination a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin-right: 5px;
+    border: 1px solid #FF9800; /* 橙色边框 */
+    border-radius: 4px;
+    text-decoration: none !important;
+    color: #FF9800; /* 橙色文字 */
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.bnp-pagination a:hover:not(.disabled) {
+    background-color: #FFF3E0; /* 浅橙色背景 */
+    color: #F57C00; /* 深橙色文字 */
+}
+
+/* 点击瞬间：背景变橙色，文字变白 */
+.bnp-pagination a:active:not(.disabled) {
+    background-color: #FF9800 !important;
+    color: white !important;
+}
+
+/* 灰掉的状态保持不变（中性灰色） */
+.bnp-pagination a.disabled {
+    color: #bdbdbd !important;
+    border-color: #e0e0e0 !important;
+    background-color: #f5f5f5 !important;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* 全局链接去下划线 */
+a {
+    text-decoration: none !important;
+    outline: none;
+}
+
+/* 支付按钮样式 (橙色主题) */
+.cancel-btn,
+.pay-now-btn {
+    display: inline-block;
+    background-color: #FF9800; /* 品牌橙色 */
+    color: #ffffff !important;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 2px 4px rgba(255, 152, 0, 0.2);
+}
+.cancel-btn:hover,
+.pay-now-btn:hover {
+    background-color: #F57C00; /* 悬停深橙色 */
+    box-shadow: 0 4px 8px rgba(245, 124, 0, 0.3);
+}
+
+.cancel-btn:active,
+.pay-now-btn:active {
+    background-color: #E65100; /* 点击更深色 */
+    transform: translateY(1px);
+}
+
+.cancel-btn:disabled, 
+.pay-now-btn:disabled {
+    background-color: #FFE0B2; /* 禁用浅色 */
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.bnp-overlay {
+    position: fixed;
+    inset: 0; 
+    width: 100vw !important;
+    height: 100vh !important;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999999;
+}
+
+.bnp-confirm-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    width: 320px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bnp-confirm-actions {
+    margin-top: 15px;
+}
+
+.bnp-confirm-actions button {
+    margin: 0 5px;
+}
+
+.confirm-button {
+    background-color: #FF7F00; 
+    color: #fff;
+    border: 1px solid #e66500; 
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.confirm-button:hover {
+    background-color: #e66500;
+    border-color: #cc5500;
+}
+
+.confirm-button:active {
+    background-color: #cc5500;
+    border-color: #b34400; 
+}
+
+.confirm-button:disabled {
+    background-color: #f0f0f0;
+    color: #aaa; 
+    border-color: #ddd;
+    cursor: not-allowed;
+}

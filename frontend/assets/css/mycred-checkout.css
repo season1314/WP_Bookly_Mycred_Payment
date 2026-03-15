@@ -1,0 +1,60 @@
+.mycred-custom-panel {
+    background-color: #f9f9f9 !important;
+    border: 2px solid #4CAF50 !important;
+    padding: 20px !important;
+    border-radius: 10px !important;
+    text-align: center !important;
+}
+
+.mycred-button {
+    background: none !important;
+    border: none !important;
+    padding: 12px 34px !important;
+    margin: 50px 0 20px 0 !important;
+    color: white !important;
+    font-size: 18px !important;
+    cursor: pointer !important;
+    background-color: #4CAF50 !important;
+    border-radius: 5px !important;
+}
+
+.mycred-button:hover {
+    background-color: #45a049 !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.mycred-msg {
+    position: fixed;
+    top: 200px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    transform: translateY(-100%);
+    transition: all 0.4s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    opacity: 0;
+    z-index: 10;
+    width: 80%;
+    margin: 0 10%;
+    z-index:99999999999999999999
+}
+
+.mycred-msg.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.msg-success {
+    background-color: #e3f2fd !important;
+    color: #0d47a1 !important;
+    border-bottom: 1px solid #bbdefb;
+}
+
+.msg-error {
+    background-color: #fdecea !important;
+    color: #d32f2f !important;
+    border-bottom: 1px solid #f5c6cb;
+}
