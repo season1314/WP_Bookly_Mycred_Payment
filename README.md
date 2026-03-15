@@ -52,6 +52,46 @@ In the **Bookly > Appearance** settings, locate the "Done" step (the final step 
 * **Crucial:** Append the booking number parameter to the URL as follows:  
   `https://yourdomain.com/checkout-page/?bookNo={booking_number}`  
 
+
+Got it! My apologies—let's get that back into professional English. Here is the final, comprehensive README.md incorporating all the logic, shortcodes, and refund rules we discussed.
+
+Markdown
+# Bookly myCRED Payment Gateway
+
+A professional, lightweight bridge plugin that seamlessly integrates the **myCRED** reward system into the **Bookly** appointment booking ecosystem. Allow your customers to pay for their appointments using points while maintaining automated status management and refund logic.
+
+---
+
+## 🌟 Technical Highlights
+
+* **Zero Database Bloat:** This plugin **does not create any new database tables**. It fully utilizes existing Bookly and myCRED meta structures.
+* **Non-Intrusive Integration:** Acts as a transparent bridge. It **will not interfere** with the native features, settings, or core workflows of either plugin.
+* **Smart Automation:** Handles appointment locking, payment timeouts, and conditional refunds automatically.
+
+---
+
+## 🧱 Shortcodes Reference
+
+### 1. Appointment Management List
+`[bnp_bookly_appointment_list status="completed" key="mycred_default" advance="3600"]`
+
+* **`status`**: Filter appointments by type (e.g., `completed`, `cancelled`, `approved`, `done`).
+* **`key`**: The specific myCRED point type used for refunds/reversals.
+* **`advance`**: **Refund Grace Period (in seconds)**. Default is `3600` (1 hour). Users can only receive a point refund if they cancel the appointment more than X seconds before the start time.
+
+### 2. Pending Payment List
+`[bnp_bookly_payment_list redirect="https://yourdomain.com/checkout"]`
+
+* **`redirect`**: The URL of your "Checkout/Cashier" page. This list displays all appointments with a `Pending` payment status and provides a link to pay.
+
+### 3. myCRED Payment Desk (Cashier)
+`[bnp_mycred_desk key="mycred_default" redirect="https://yourdomain.com/success"]`
+
+* **`key`**: The myCRED point type key to be deducted for the payment.
+* **`redirect`**: The destination URL after a successful transaction.
+
+
+
 ---
 
 ## 📄 License
