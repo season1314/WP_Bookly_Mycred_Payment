@@ -16,6 +16,19 @@ A lightweight bridge plugin that seamlessly integrates the **myCRED** reward sys
 * **Real-time Balance Verification:** Automatically checks user point balances before confirming the booking.
 * **Automated Transaction Logs:** Every payment is recorded within the myCRED history for transparent auditing.
 
+  
+## 🔄 Booking & Payment Logic
+
+The plugin implements a "Reserve-and-Pay" workflow to ensure schedule integrity while preventing unpaid "ghost" bookings:
+
+1.  **Appointment Creation:** When a user initiates a booking, the **Appointment Status** is immediately set to `Approved` to temporarily lock the time slot.
+2.  **Pending Payment:** Simultaneously, the **Payment Status** is marked as `Pending`.
+3.  **15-Minute Grace Period:** * **Success:** If the user completes the myCRED points payment within **15 minutes**, the Payment Status is updated to `Completed`.
+    * **Expiration/Failure:** If the payment is not completed within the 15-minute window, the system automatically triggers a cleanup:
+        * **Appointment Status** is changed to `Rejected` (releasing the time slot).
+        * **Payment Status** is changed to `Rejected`.
+4.  **Non-Intrusive:** This logic is isolated to the myCRED payment flow and **does not interfere** with other Bookly payment methods or standard workflows.
+
 ## 🛠 Installation
 
 1.  **Requirement:** Ensure both [Bookly](https://wordpress.org/plugins/bookly-responsive-appointment-booking-tool/) and [myCRED](https://wordpress.org/plugins/mycred/) are installed and activated.
@@ -38,7 +51,6 @@ In the **Bookly > Appearance** settings, locate the "Done" step (the final step 
 * Set the target URL to your specialized points-checkout page (where your plugin's shortcode is placed).
 * **Crucial:** Append the booking number parameter to the URL as follows:  
   `https://yourdomain.com/checkout-page/?bookNo={booking_number}`  
-  *(Note: Replace `{book_id}` with the appropriate Bookly placeholder if different).*
 
 ---
 
