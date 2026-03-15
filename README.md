@@ -1,22 +1,3 @@
-# Bookly myCRED Payment Gateway
-
-A lightweight bridge plugin that seamlessly integrates the **myCRED** reward system into the **Bookly** appointment booking ecosystem. Allow your customers to settle their appointments using accumulated points as a flexible payment alternative.
-
----
-
-## 🌟 Technical Highlights
-
-* **Zero Database Bloat:** This plugin **does not create any new database tables**. It operates entirely within the existing Bookly and myCRED architectures, ensuring your site remains lean and fast.
-* **Non-Intrusive Integration:** Acts as a transparent bridge. It **will not interfere** with the native features, settings, or core workflows of either plugin.
-* **Plug-and-Play Compatibility:** Built to respect the original logic of both platforms. Your existing reward rules and booking schedules remain completely intact.
-
-## 🚀 Key Features
-
-* **Points-as-Currency:** Enable a "Pay with myCRED" option at the Bookly checkout.
-* **Real-time Balance Verification:** Automatically checks user point balances before confirming the booking.
-* **Automated Transaction Logs:** Every payment is recorded within the myCRED history for transparent auditing.
-
-  
 ## 🔄 Booking & Payment Logic
 
 The plugin implements a "Reserve-and-Pay" workflow to ensure schedule integrity while preventing unpaid "ghost" bookings:
