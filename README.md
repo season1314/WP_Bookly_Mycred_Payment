@@ -16,7 +16,9 @@ A lightweight bridge plugin that seamlessly integrates the **myCRED** reward sys
 * **Real-time Balance Verification:** Automatically checks user point balances before confirming the booking.
 * **Automated Transaction Logs:** Every payment is recorded within the myCRED history for transparent auditing.
 
-  
+
+---
+
 ## 🔄 Booking & Payment Logic
 
 The plugin implements a "Reserve-and-Pay" workflow to ensure schedule integrity while preventing unpaid "ghost" bookings:
@@ -28,6 +30,9 @@ The plugin implements a "Reserve-and-Pay" workflow to ensure schedule integrity 
         * **Appointment Status** is changed to `Rejected` (releasing the time slot).
         * **Payment Status** is changed to `Rejected`.
 4.  **Non-Intrusive:** This logic is isolated to the myCRED payment flow and **does not interfere** with other Bookly payment methods or standard workflows.
+
+
+---
 
 ## 🛠 Installation
 
@@ -53,22 +58,8 @@ In the **Bookly > Appearance** settings, locate the "Done" step (the final step 
   `https://yourdomain.com/checkout-page/?bookNo={booking_number}`  
 
 
-Got it! My apologies—let's get that back into professional English. Here is the final, comprehensive README.md incorporating all the logic, shortcodes, and refund rules we discussed.
-
-Markdown
-# Bookly myCRED Payment Gateway
-
-A professional, lightweight bridge plugin that seamlessly integrates the **myCRED** reward system into the **Bookly** appointment booking ecosystem. Allow your customers to pay for their appointments using points while maintaining automated status management and refund logic.
-
 ---
 
-## 🌟 Technical Highlights
-
-* **Zero Database Bloat:** This plugin **does not create any new database tables**. It fully utilizes existing Bookly and myCRED meta structures.
-* **Non-Intrusive Integration:** Acts as a transparent bridge. It **will not interfere** with the native features, settings, or core workflows of either plugin.
-* **Smart Automation:** Handles appointment locking, payment timeouts, and conditional refunds automatically.
-
----
 
 ## 🧱 Shortcodes Reference
 
@@ -91,10 +82,10 @@ A professional, lightweight bridge plugin that seamlessly integrates the **myCRE
 * **`redirect`**: The destination URL after a successful transaction.
 
 
-
 ---
+
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. file for details.
 
